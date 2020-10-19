@@ -14,7 +14,7 @@ Additionally, when running the code just double check that everything prior to t
 
 # Estimated Time
 One of the first things I noticed while looking through the data was at how consistent the average cooking time is across all the restaurants.
-Looking at "RestaurantsVsCookTimeGraph.pdf", it becomes apparent how despite the overwhelming amount of choices of food to choose from, most people will have to wait at least 30 minutes before getting their food. But how long? It's not just a matter of cook time, it's also a matter of how long the drive will take.
+Looking at "RestaurantsVsCookTimeGraph.png", it becomes apparent how despite the overwhelming amount of choices of food to choose from, most people will have to wait at least 30 minutes before getting their food. But how long? It's not just a matter of cook time, it's also a matter of how long the drive will take.
 
 Consequently, I created the program located in "XTernProjectEstimatedTime.R". This R code enables anyone to simply say what restaurant they would like to order from, and their current location, and the code will generate an estimated time for how long they should expect to get their food.
 
@@ -26,7 +26,7 @@ Ideally, this function would also be combined with the generic search algorithm 
 # Rating Per Cost
 There are so many food options to choose one, but which restaurants give the best food for their cost?
 
-Looking at "RatingPerCostGraph.pdf", there appears to be a trend between the Rating of a restaurant and that restaurant's average cost. Specifically, the relationship can be modelled by the function "Avg Cost" = 6.79073("Rating")^2 - 40.8101(Rating) + 79.518. This equation was derived by Tableau, with an R^2 value of 0.564. So although the relationship isn't strong, there is still a slight correlation.
+Looking at "RatingPerCostGraph.png", there appears to be a trend between the Rating of a restaurant and that restaurant's average cost. Specifically, the relationship can be modelled by the function "Avg Cost" = 6.79073("Rating")^2 - 40.8101(Rating) + 79.518. This equation was derived by Tableau, with an R^2 value of 0.564. So although the relationship isn't strong, there is still a slight correlation.
 
 So with this correlation being present but weak, there are going to restaurants that diverge from this trend. How can our consumers take advantage of this fact?
 
@@ -37,7 +37,7 @@ By doing this, the consumers will be able to look at which restaurants have the 
 Similarly to the Estimated Time algorithm, this code can be combined with the generic search function (discussed below) by inputting the generic search's output into this code's input, allowing the user to make an even more informed decision on where they would like to eat.
 
 # Generic Search
-As previously mentioned, anyone looking at the list of restaurants surely would be overwhelmed by the number of choices - simply by looking at the left hand graph of "RestaurantsVsCookTimeGraph.pdf" one can see how hard it may be to choose where to eat.
+As previously mentioned, anyone looking at the list of restaurants surely would be overwhelmed by the number of choices - simply by looking at the left hand graph of "RestaurantsVsCookTimeGraph.png" one can see how hard it may be to choose where to eat.
 
 To remedy this, I created a generic search algorithm to help the consumer narrow down their choices on where they might want to eat. The "XTernProjectRestSearch.R" file contains this search algorithm. Line 65 is where the search is called. In the call, the user can specify the maximum cooking time, the cuisine, minimum rating, maximum cost, and maximum distance (in miles) they would like the restaurants to have. Line 70 will output just the names of the restaurants that fit the specifications, while line 73 outputs the specified restaurants along with the restaurant's information.
 
@@ -46,7 +46,7 @@ Of course, if the user is indifferent towards any of the categories, they can si
 Although this insight involves less analysis than code, I believe that this still serves as an insight into the given data source, while also providing a very powerful tool to the users of FoodieX, especially when combined with the above 2 algorithms.
 
 # Clustered Map
-In order to avoid the clutter of all of restaurants in "RestaurantsVsCookTimeGraph.pdf", I created "ClusteredMapOfRestaurants.pdf". Each dot on the map represents a square area of 9 square miles, with the color of each dot representing the amount of restaurants within each area.
+In order to avoid the clutter of all of restaurants in "RestaurantsVsCookTimeGraph.png", I created "ClusteredMapOfRestaurants.png". Each dot on the map represents a square area of 9 square miles, with the color of each dot representing the amount of restaurants within each area.
 
 This map serves 2 main purposes: to identify potential FoodieX pickup zones and to identify locations where FoodieX may want to add more restaurants.
 
